@@ -1,10 +1,11 @@
 import Head from "next/head";
-import Link from "next/link";
+import Image from "next/image";
 import LinkCard from "@/components/card";
+import Navbar from "@/components/navbar";
 
 export default function Home() {
   return (
-    <div className="flex justify-center items-center flex-col">
+    <div className="flex justify-center items-center  flex-col">
       <Head>
         <title>Renewable Energy Hub</title>
         <meta
@@ -12,9 +13,18 @@ export default function Home() {
           content="Educational resources for renewable energy adoption"
         />
       </Head>
-      <h1 className="text-8xl font-bold p-10 mt-10 gradient-text">
-        Welcome to the Renewable Energy Hub!
-      </h1>
+      <div className="grid grid-cols-2 items-center  h-screen">
+        <Image
+          className="color"
+          src={"/bg.png"}
+          alt="bg"
+          width={500}
+          height={500}
+        ></Image>
+        <h1 className="text-6xl  font-bold gradient-text">
+          Welcome to the Renewable Energy Hub!
+        </h1>
+      </div>
 
       <div className="">
         <LinkCard
@@ -34,7 +44,7 @@ export default function Home() {
         />
 
         <LinkCard
-          title="Subsidy Benfits in India"
+          title="Subsidy Benefits in India"
           description="Know about the benefits provided by the government of adoption of renewable energy resources like solar."
           linkUrl="https://pmsuryaghar.gov.in/"
         />
